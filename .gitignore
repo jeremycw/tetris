@@ -1,3 +1,4 @@
 *.o
 tetris
-hasher
+events_h
+events.h

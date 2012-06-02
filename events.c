@@ -2,8 +2,7 @@
 
 #define NULL 0
 
-event_hdl* g_event_handlers[14] = {0};
-
+event_hdl* g_event_handlers[NUM_EVENTS] = {0};
 unsigned int hash_event_name(const char* event);
 
 int register_event_handler(const char* event, void (*f)(void*))
@@ -43,34 +42,6 @@ unsigned int hash_event_name(const char* event)
     }
     switch(h)
     {
-    case 0x594dfe68: //AttemptMoveLeft
-        return 0;
-    case 0x2859caff: //AttemptMoveRight
-        return 1;
-    case 0x5949d452: //AttemptMoveDown
-        return 2;
-    case 0x5199df7a: //AttemptBlockRotate
-        return 3;
-    case 0xe637ec70: //MoveSucceeded
-        return 4;
-    case 0xd804af5f: //BlockHit
-        return 5;
-    case 0x9384eb: //BlockDrop
-        return 6;
-    case 0x1f5c09fc: //LineCleared
-        return 7;
-    case 0xef990ea4: //DoneClearing
-        return 8;
-    case 0xaa17b262: //NewBlock
-        return 9;
-    case 0xab00304c: //NewScore
-        return 10;
-    case 0xaaf356a5: //NewLevel
-        return 11;
-    case 0x831ae4db: //LogicReady
-        return 12;
-    case 0x9c7656f2: //GameOver
-        return 13;
-
+      HASHES
     }
 }

@@ -13,4 +13,13 @@ events.o: events.c
 render.o: render.c
 	gcc -g -c render.c
 
+events.h: events_h events.txt
+	./events_h < events.txt
+
+events_h: events_h.c
+	gcc events_h.c -o events_h
+
 events.o main.o render.o tetris.o: events.h tetris.h
+
+clean:
+	rm *.o tetris events_h events.h
