@@ -127,8 +127,8 @@ void init_renderer()
         printf("Failed to init screen!\n");
     }
     TTF_Init();
-    font = TTF_OpenFont("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf", 14);
-    over_font = TTF_OpenFont("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf", 48);
+    font = TTF_OpenFont("font.ttf", 14);
+    over_font = TTF_OpenFont("font.ttf", 48);
     if(font == NULL)
     {
         //cont = 0;
@@ -238,7 +238,7 @@ void renderer_NewLevel(void* data)
 void renderer_GameOver(void* data)
 {
     SDL_Surface* game_over;
-    TTF_Font* over_font = TTF_OpenFont("/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf", 48);
+    TTF_Font* over_font = TTF_OpenFont("font.ttf", 48);
     game_over = TTF_RenderText_Solid( over_font, "Game Over!", text_colour);
     SDL_Rect rect = {20, 150};
     SDL_BlitSurface(game_over, NULL, screen, &rect); 

@@ -64,7 +64,7 @@ void init_main()
     register_event_handler("NewLevel", main_NewLevel);
 }
 
-int main()
+int main(int argc, char* argv[])
 {
     int frame_start = 0;
     int frame_end = 0;

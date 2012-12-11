@@ -1,5 +1,5 @@
 tetris: events.o main.o render.o tetris.o
-	gcc  -g events.o main.o render.o tetris.o -lSDL -lSDL_ttf -o tetris
+	gcc  -g events.o main.o render.o tetris.o `sdl-config --libs` -lSDL_ttf -o tetris
 
 main.o: main.c
 	gcc -g -c main.c
